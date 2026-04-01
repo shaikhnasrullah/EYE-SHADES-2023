@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Eye Shades Sakinaka — Mumbai's trusted eyewear store since 1999. Ray-Ban, Oakley, Fastrack, Titan. Free eye test."/>
+<title>Eye Shades | Premium Eyewear Sakinaka Mumbai</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#1a1a1a;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block;object-fit:cover}
+ul{list-style:none}
+button{border:none;cursor:pointer;font-family:inherit}
+:root{
+  --t:#006e6e;--tl:#00a3a3;--tp:#e6f5f5;--tm:#cce8e8;
+  --off:#f7f9f9;--bd:#e8eaea;--txt:#1a1a1a;--mu:#6b7280;--lg:#9ca3af;
+  --amb:#f5a623;--red:#e74c3c;--grn:#27ae60;
+  --sh:0 2px 16px rgba(0,0,0,.08);--shl:0 8px 40px rgba(0,0,0,.12);
+}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--t);border-radius:2px}
+
+/* ANN */
+.ann{background:var(--t);color:#fff;text-align:center;padding:9px 16px;font-size:.76rem;font-weight:500}
+.ann a{color:#fff;font-weight:700}
+
+/* NAVBAR */
+.nav{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid var(--bd);box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.nav-top{display:flex;align-items:center;gap:14px;padding:13px 48px;max-width:1400px;margin:0 auto}
+.logo{font-family:'DM Serif Display',serif;font-size:1.55rem;color:var(--t);letter-spacing:1px;flex-shrink:0;line-height:1}
+.logo small{display:block;font-size:.55rem;letter-spacing:3px;color:var(--mu);font-family:'DM Sans',sans-serif;font-weight:400;text-transform:uppercase;margin-top:1px}
+.srch{flex:1;max-width:520px;margin:0 auto;position:relative}
+.srch input{width:100%;border:1.5px solid var(--bd);border-radius:50px;padding:10px 18px 10px 42px;font-size:.87rem;background:var(--off);outline:none;transition:border .2s;font-family:'DM Sans',sans-serif;color:var(--txt)}
+.srch input:focus{border-color:var(--t);background:#fff}
+.srch svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--mu);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav-acts{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
+.icn-btn{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 10px;border-radius:8px;background:none;color:var(--mu);font-size:.56rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s}
+.icn-btn svg{width:19px;height:19px;stroke:var(--mu);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+.icn-btn:hover{background:var(--tp);color:var(--t)}.icn-btn:hover svg{stroke:var(--t)}
+.cta-btn{background:var(--t);color:#fff;padding:10px 20px;border-radius:50px;font-size:.76rem;font-weight:600;transition:all .2s;white-space:nowrap;text-decoration:none}
+.cta-btn:hover{background:var(--tl);transform:translateY(-1px)}
+.hbg{display:none;flex-direction:column;gap:4px;padding:6px;background:none}
+.hbg span{width:21px;height:2px;background:var(--txt);border-radius:2px}
+
+/* NAV LINKS ROW */
+.nl-row{border-top:1px solid var(--bd)}
+.nl-inner{display:flex;max-width:1400px;margin:0 auto;padding:0 48px;overflow-x:auto;scrollbar-width:none}
+.nl-inner::-webkit-scrollbar{display:none}
+.nl{display:flex;align-items:center;gap:5px;padding:11px 15px;font-size:.77rem;font-weight:500;color:var(--mu);white-space:nowrap;border-bottom:2.5px solid transparent;transition:all .2s;cursor:pointer}
+.nl:hover,.nl.on{color:var(--t);border-color:var(--t)}
+.nl .hot{background:var(--red);color:#fff;font-size:.52rem;padding:2px 6px;border-radius:10px;font-weight:700;margin-left:2px}
+
+/* MOBILE */
+.mob-ov{display:none;position:fixed;inset:0;z-index:1100;background:rgba(0,0,0,.5)}
+.mob-ov.open{display:block}
+.mob-panel{position:absolute;top:0;left:0;width:280px;height:100%;background:#fff;padding:22px;transform:translateX(-100%);transition:transform .3s;overflow-y:auto}
+.mob-ov.open .mob-panel{transform:none}
+.mob-x{position:absolute;top:14px;right:14px;font-size:1.4rem;color:var(--mu);cursor:pointer}
+.mob-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--t);margin-bottom:20px}
+.mob-a{display:block;padding:12px 0;border-bottom:1px solid var(--bd);font-size:.88rem;color:var(--txt);font-weight:500}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#e8f5f5,#f0fafa 50%,#fff8ee);overflow:hidden}
+.hero-in{max-width:1400px;margin:0 auto;padding:56px 48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;min-height:450px}
+.h-pill{display:inline-flex;align-items:center;gap:7px;background:var(--t);color:#fff;padding:5px 14px;border-radius:50px;font-size:.68rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+.h-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1.1;color:var(--txt);margin-bottom:14px}
+.h-title em{color:var(--t);font-style:italic}
+.h-desc{font-size:.93rem;color:var(--mu);line-height:1.7;max-width:420px;margin-bottom:26px}
+.h-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-t{display:inline-flex;align-items:center;gap:7px;background:var(--t);color:#fff;padding:12px 26px;border-radius:50px;font-size:.81rem;font-weight:600;transition:all .25s;text-decoration:none}
+.btn-t:hover{background:var(--tl);transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,110,110,.28)}
+.btn-o{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--t);padding:12px 26px;border-radius:50px;font-size:.81rem;font-weight:600;border:2px solid var(--t);transition:all .25s;text-decoration:none}
+.btn-o:hover{background:var(--tp)}
+.h-trust{display:flex;gap:18px;margin-top:26px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:6px;font-size:.73rem;color:var(--mu)}
+.ti svg{width:15px;height:15px;stroke:var(--t);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.h-img{border-radius:20px;box-shadow:var(--shl);width:100%;height:370px;object-fit:cover}
+.h-float{position:absolute;bottom:18px;left:-14px;background:#fff;border-radius:12px;padding:11px 15px;box-shadow:var(--shl);display:flex;align-items:center;gap:9px}
+.hf-big{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--t);line-height:1}
+.hf-sm{font-size:.62rem;color:var(--mu);line-height:1.4}
+.h-img-wrap{position:relative}
+
+/* STATS */
+.stats{background:var(--t);color:#fff;padding:20px 48px}
+.stats-in{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sbox{text-align:center;padding:6px 0;border-right:1px solid rgba(255,255,255,.15)}
+.sbox:last-child{border:none}
+.sbox .n{font-family:'DM Serif Display',serif;font-size:1.85rem;display:block;line-height:1;margin-bottom:2px}
+.sbox .l{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;opacity:.75}
+
+/* WRAPPER */
+.w{max-width:1400px;margin:0 auto}
+.sp{padding:52px 48px}
+.sec-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px;gap:12px}
+.st{font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,3vw,2rem);color:var(--txt);line-height:1.2}
+.st em{color:var(--t);font-style:italic}
+.ss{font-size:.8rem;color:var(--mu);margin-top:4px}
+.sa{font-size:.76rem;font-weight:600;color:var(--t);white-space:nowrap}
+.sa:hover{text-decoration:underline}
+
+/* CATS */
+.cat-bg{background:var(--off)}
+.cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:24px}
+.cc{background:#fff;border:1.5px solid var(--bd);border-radius:12px;padding:20px 12px;text-align:center;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
+.cc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--t);transform:scaleX(0);transition:transform .25s}
+.cc:hover,.cc.on{border-color:var(--t);transform:translateY(-3px);box-shadow:0 4px 18px rgba(0,110,110,.1)}
+.cc:hover::after,.cc.on::after{transform:scaleX(1)}
+.cc.on{background:var(--tp)}
+.c-img{width:64px;height:64px;border-radius:50%;background:var(--off);margin:0 auto 10px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.c-img img{width:100%;height:100%;object-fit:cover}
+.cc h3{font-size:.8rem;font-weight:600;color:var(--txt);margin-bottom:3px}
+.cc span{font-size:.66rem;color:var(--t);font-weight:500}
+
+/* SHAPES */
+.sh-scroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;margin-top:24px}
+.sh-scroll::-webkit-scrollbar{display:none}
+.shc{flex-shrink:0;width:124px;background:var(--off);border:1.5px solid var(--bd);border-radius:12px;padding:16px 10px;text-align:center;cursor:pointer;transition:all .25s}
+.shc:hover,.shc.on{border-color:var(--t);background:var(--tp)}
+.sh-icon{width:72px;height:46px;margin:0 auto 9px;display:flex;align-items:center;justify-content:center}
+.sh-icon svg{width:100%;height:100%}
+.shc h4{font-size:.76rem;font-weight:600;color:var(--txt)}
+.shc small{font-size:.64rem;color:var(--mu)}
+
+/* BRANDS */
+.br-bg{background:var(--off)}
+.br-row{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+.brb{background:#fff;border:1.5px solid var(--bd);border-radius:8px;padding:11px 24px;font-size:.76rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu);cursor:pointer;transition:all .25s}
+.brb:hover,.brb.on{border-color:var(--t);color:var(--t);background:var(--tp)}
+
+/* PRODUCTS */
+.fb-row{display:flex;align-items:center;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.flb{font-size:.7rem;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-right:2px}
+.fb{background:transparent;border:1.5px solid var(--bd);color:var(--mu);padding:6px 16px;border-radius:50px;font-size:.7rem;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+.fb:hover,.fb.on{background:var(--t);color:#fff;border-color:var(--t)}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pc{background:#fff;border:1.5px solid var(--bd);border-radius:12px;overflow:hidden;transition:all .3s;cursor:pointer}
+.pc:hover{box-shadow:var(--shl);transform:translateY(-4px);border-color:var(--tm)}
+.pi{height:192px;background:var(--off);position:relative;overflow:hidden}
+.pi img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.pc:hover .pi img{transform:scale(1.05)}
+.pbdg{position:absolute;top:9px;left:9px;font-size:.57rem;font-weight:700;padding:4px 9px;border-radius:50px;text-transform:uppercase}
+.bb{background:#fff3cd;color:#856404}.bn{background:#d1fae5;color:#065f46}.bh{background:#fee2e2;color:#991b1b}.bs{background:var(--t);color:#fff}
+.pw{position:absolute;top:9px;right:9px;width:29px;height:29px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 7px rgba(0,0,0,.1);cursor:pointer;transition:all .2s}
+.pw svg{width:14px;height:14px;stroke:#aaa;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pw:hover svg{stroke:var(--red)}
+.pinf{padding:13px}
+.pbr{font-size:.6rem;font-weight:700;color:var(--t);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px}
+.pnm{font-size:.88rem;font-weight:600;color:var(--txt);margin-bottom:3px;line-height:1.3}
+.pds{font-size:.7rem;color:var(--mu);margin-bottom:7px;line-height:1.4}
+.pst{display:flex;align-items:center;gap:4px;margin-bottom:7px}
+.pst .s{color:var(--amb);font-size:.76rem}.pst .c{font-size:.66rem;color:var(--mu)}
+.pft{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.ppr{font-size:.97rem;font-weight:700;color:var(--txt)}
+.ppr .or{font-size:.72rem;color:var(--mu);text-decoration:line-through;font-weight:400;margin-left:4px}
+.ppr .of{font-size:.65rem;color:var(--grn);font-weight:700}
+.peq{background:var(--t);color:#fff;padding:7px 13px;border-radius:50px;font-size:.66rem;font-weight:600;white-space:nowrap;transition:all .2s;text-decoration:none}
+.peq:hover{background:var(--tl)}
+
+/* HOW */
+.how-bg{background:var(--tp)}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}
+.hwc{background:#fff;border-radius:12px;padding:26px 18px;text-align:center;box-shadow:0 2px 10px rgba(0,110,110,.06)}
+.hwn{width:42px;height:42px;background:var(--t);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1.15rem;margin:0 auto 14px}
+.hwc h3{font-size:.9rem;font-weight:700;color:var(--txt);margin-bottom:7px}
+.hwc p{font-size:.76rem;color:var(--mu);line-height:1.6}
+
+/* OFFERS */
+.off-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.ob{border-radius:12px;overflow:hidden;position:relative;min-height:165px;display:flex;align-items:center;padding:26px}
+.ob.tl{background:linear-gradient(135deg,var(--t),var(--tl))}
+.ob.am{background:linear-gradient(135deg,#f5a623,#f7c066)}
+.ob h3{font-family:'DM Serif Display',serif;font-size:1.35rem;color:#fff;margin-bottom:7px;line-height:1.2}
+.ob p{font-size:.76rem;color:rgba(255,255,255,.85);margin-bottom:16px;line-height:1.5}
+.ob-btn{background:#fff;padding:8px 20px;border-radius:50px;font-size:.73rem;font-weight:700;display:inline-block}
+.ob.tl .ob-btn{color:var(--t)}.ob.am .ob-btn{color:#c67e0a}
+.ob-d{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:4rem;opacity:.15}
+
+/* TRYON */
+.tryon-bg{background:linear-gradient(135deg,#1a1a2e,#006e6e);color:#fff}
+.tryon-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.tr-tag{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);color:#fff;padding:5px 14px;border-radius:50px;font-size:.63rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;display:inline-block;margin-bottom:18px}
+.tr-title{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,3vw,2.6rem);margin-bottom:14px;line-height:1.2}
+.tr-title em{font-style:italic;opacity:.8}
+.tr-desc{font-size:.88rem;opacity:.8;line-height:1.7;margin-bottom:26px}
+.tr-steps{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.tr-step{display:flex;align-items:flex-start;gap:11px}
+.tr-dot{width:24px;height:24px;border:2px solid rgba(255,255,255,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.66rem;font-weight:700;flex-shrink:0;margin-top:1px}
+.tr-step p{font-size:.83rem;opacity:.85;margin:0;padding-top:2px;line-height:1.5}
+.tr-mock{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:34px;text-align:center;backdrop-filter:blur(10px)}
+.tr-emoji{font-size:4.2rem;display:block;margin-bottom:16px}
+.tr-live{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:7px 16px;margin-bottom:12px}
+.ldot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.tr-live span{font-size:.63rem;letter-spacing:2px;text-transform:uppercase;opacity:.9}
+.tr-mock p{font-size:.83rem;opacity:.7;line-height:1.6}
+
+/* REVIEWS */
+.rev-bg{background:var(--off)}
+.rat-sum{background:#fff;border-radius:12px;padding:22px 28px;display:flex;align-items:center;gap:28px;margin-bottom:24px;box-shadow:var(--sh);flex-wrap:wrap}
+.rb .sc{font-family:'DM Serif Display',serif;font-size:3.3rem;color:var(--txt);line-height:1}
+.rb .ss2{color:var(--amb);font-size:1rem;margin:3px 0}
+.rb .tot{font-size:.7rem;color:var(--mu)}
+.rdv{width:1px;height:65px;background:var(--bd);flex-shrink:0}
+.rbrs{flex:1;display:flex;flex-direction:column;gap:6px;min-width:160px}
+.rrow{display:flex;align-items:center;gap:7px}
+.rrow span{font-size:.68rem;color:var(--mu);width:26px;flex-shrink:0}
+.rbar{flex:1;height:6px;background:var(--bd);border-radius:3px;overflow:hidden}
+.rbf{height:100%;background:var(--amb);border-radius:3px}
+.rg{display:flex;align-items:center;gap:9px;margin-left:auto}
+.rg svg{width:34px;height:34px}
+.rg .gn{font-family:'DM Serif Display',serif;font-size:1.7rem;color:var(--txt);line-height:1}
+.rg .gl{font-size:.63rem;color:var(--mu)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rvc{background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:all .3s}
+.rvc:hover{box-shadow:var(--shl);transform:translateY(-3px)}
+.rv-top{display:flex;align-items:center;gap:11px;margin-bottom:11px}
+.rv-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;font-weight:700;color:#fff;flex-shrink:0}
+.rv-meta h4{font-size:.85rem;font-weight:600;color:var(--txt)}
+.rv-meta span{font-size:.66rem;color:var(--mu)}
+.rv-st{color:var(--amb);font-size:.78rem;margin-bottom:7px}
+.rv-txt{font-size:.78rem;color:#4b5563;line-height:1.6}
+.rv-src{display:flex;align-items:center;gap:5px;margin-top:11px;padding-top:11px;border-top:1px solid var(--bd)}
+.rv-src svg{width:12px;height:12px}
+.rv-src span{font-size:.6rem;color:var(--mu)}
+.rcta{text-align:center;margin-top:26px}
+.rcta a{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--t);color:var(--t);padding:11px 28px;border-radius:50px;font-size:.78rem;font-weight:700;transition:all .2s}
+.rcta a:hover{background:var(--t);color:#fff}
+
+/* INSTAGRAM */
+.insta-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.ih{display:flex;align-items:center;gap:7px;font-size:.83rem;font-weight:700;color:var(--txt)}
+.ih svg{width:19px;height:19px;stroke:var(--txt);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.insta-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.ig{aspect-ratio:1;overflow:hidden;border-radius:8px;position:relative;cursor:pointer}
+.ig img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ig:hover img{transform:scale(1.08)}
+.ig-ov{position:absolute;inset:0;background:rgba(0,110,110,.6);opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center;border-radius:8px}
+.ig:hover .ig-ov{opacity:1}
+.ig-ov span{color:#fff;font-size:.7rem;font-weight:600}
+.icta{text-align:center;margin-top:22px}
+.icta a{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:10px 26px;border-radius:50px;font-size:.78rem;font-weight:700}
+
+/* FIND US */
+.fu-bg{background:var(--off)}
+.fu-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:44px;align-items:start}
+.fi h2{font-family:'DM Serif Display',serif;font-size:1.85rem;color:var(--txt);margin-bottom:7px}
+.fi h2 em{color:var(--t);font-style:italic}
+.fi .sub{font-size:.83rem;color:var(--mu);margin-bottom:22px;line-height:1.6}
+.op-badge{display:inline-flex;align-items:center;gap:7px;background:#d1fae5;border:1px solid #6ee7b7;border-radius:8px;padding:8px 14px;margin-bottom:18px}
+.op-dot{width:7px;height:7px;background:var(--grn);border-radius:50%;animation:blink 2s infinite}
+.op-badge span{font-size:.78rem;font-weight:600;color:#065f46}
+.cl{display:flex;flex-direction:column;gap:13px;margin-bottom:22px}
+.ci{display:flex;align-items:flex-start;gap:11px}
+.ci-icon{width:36px;height:36px;background:var(--tp);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon svg{width:16px;height:16px;stroke:var(--t);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ci h4{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--mu);margin-bottom:2px}
+.ci p{font-size:.83rem;color:var(--txt);line-height:1.5}
+.ci a{color:var(--txt)}
+.dir-btn{display:inline-flex;align-items:center;gap:8px;background:var(--t);color:#fff;padding:11px 22px;border-radius:50px;font-size:.78rem;font-weight:700;transition:all .2s;text-decoration:none}
+.dir-btn:hover{background:var(--tl);transform:translateY(-2px)}
+.map-wrap{border-radius:20px;overflow:hidden;box-shadow:var(--shl);border:1.5px solid var(--bd)}
+.map-wrap iframe{display:block;width:100%;height:420px;border:none}
+
+/* WHY */
+.why-bg{background:var(--t);color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.wy{display:flex;align-items:flex-start;gap:12px}
+.wy-ic{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.wy h4{font-size:.86rem;font-weight:700;margin-bottom:4px}
+.wy p{font-size:.73rem;opacity:.8;line-height:1.5}
+
+/* FOOTER */
+footer{background:#111;color:#9ca3af;padding:48px 48px 22px}
+.ft-in{max-width:1400px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:36px}
+.ft-logo{font-family:'DM Serif Display',serif;font-size:1.6rem;color:#fff;display:block;margin-bottom:4px}
+.ft-est{font-size:.58rem;letter-spacing:3px;color:#6b7280;text-transform:uppercase;margin-bottom:12px;display:block}
+.ft-brand p{font-size:.8rem;line-height:1.7;max-width:240px}
+.ft-col h4{font-size:.63rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e5e7eb;margin-bottom:14px}
+.ft-col ul{display:flex;flex-direction:column;gap:8px}
+.ft-col li a{font-size:.8rem;transition:color .2s}
+.ft-col li a:hover{color:var(--tl)}
+.ft-bot{border-top:1px solid #2a2a2a;padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.ft-bot p{font-size:.7rem}
+.soc-row{display:flex;gap:9px}
+.sb{width:32px;height:32px;border:1px solid #2a2a2a;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.sb:hover{border-color:var(--tl);background:rgba(0,163,163,.1)}
+.sb svg{width:14px;height:14px;stroke:#9ca3af;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sb:hover svg{stroke:var(--tl)}
+
+/* WA FLOAT */
+.wa{position:fixed;bottom:26px;right:26px;z-index:900;background:#25d366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.45);transition:transform .2s;text-decoration:none}
+.wa:hover{transform:scale(1.1)}
+.wa svg{width:26px;height:26px}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.rev.vis{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.pg{grid-template-columns:repeat(3,1fr)}.cat-grid{grid-template-columns:repeat(3,1fr)}.ft-grid{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:860px){
+  .nav-top{padding:11px 18px}.nl-inner{padding:0 18px}.srch{display:none}.hbg{display:flex}
+  .sp{padding:40px 18px}.hero-in{grid-template-columns:1fr;padding:36px 18px;min-height:auto}.h-img-wrap{display:none}
+  .stats{padding:16px 18px}.stats-in{grid-template-columns:repeat(2,1fr)}
+  .how-grid{grid-template-columns:repeat(2,1fr)}.tryon-in{grid-template-columns:1fr;gap:32px}
+  .fu-grid{grid-template-columns:1fr}.map-wrap iframe{height:270px}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr;gap:18px}.ft-bot{flex-direction:column;text-align:center}
+  .off-grid{grid-template-columns:1fr}.rev-grid{grid-template-columns:1fr}
+  .rat-sum{flex-direction:column;gap:14px}.rdv{width:60px;height:1px}.rg{margin-left:0}
+}
+@media(max-width:560px){.pg{grid-template-columns:repeat(2,1fr)}.cat-grid{grid-template-columns:repeat(2,1fr)}.how-grid{grid-template-columns:1fr}.insta-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr}.h-btns{flex-direction:column}}
+@media(max-width:360px){.pg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/918828245787?text=Hello%20Eye%20Shades!" target="_blank" class="wa">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- MOBILE DRAWER -->
+<div class="mob-ov" id="mobOv">
+  <div class="mob-panel" id="mobP">
+    <span class="mob-x" id="mobX">✕</span>
+    <div class="mob-logo">Eye Shades</div>
+    <a href="#cats" class="mob-a" onclick="cm()">Eyeglasses</a>
+    <a href="#cats" class="mob-a" onclick="cm()">Sunglasses</a>
+    <a href="#cats" class="mob-a" onclick="cm()">Sports Eyewear</a>
+    <a href="#cats" class="mob-a" onclick="cm()">Kids Glasses</a>
+    <a href="#cats" class="mob-a" onclick="cm()">Contact Lenses</a>
+    <a href="#shapes" class="mob-a" onclick="cm()">By Shape</a>
+    <a href="#brands" class="mob-a" onclick="cm()">By Brand</a>
+    <a href="#findus" class="mob-a" onclick="cm()">Find Us</a>
+    <a href="#reviews" class="mob-a" onclick="cm()">Reviews</a>
+    <br/>
+    <a href="https://wa.me/918828245787?text=Free%20eye%20test%20book%20karna%20hai!" target="_blank" class="btn-t" style="width:100%;justify-content:center;margin-top:8px">📲 Book Free Eye Test</a>
+  </div>
+</div>
+
+<!-- ANN BAR -->
+<div class="ann">🎉 <strong>FREE Eye Test</strong> · Same Day Service · Andheri Sakinaka Mumbai · 📞 <a href="tel:+918828245787">+91 88282 45787</a></div>
+
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="nav-top">
+    <a href="#" class="logo">Eye Shades<small>Sakinaka · Since 1999</small></a>
+    <div class="srch">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Search frames, brands, shapes…" id="SI"/>
+    </div>
+    <div class="nav-acts">
+      <button class="icn-btn" onclick="g('findus')">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Store</span>
+      </button>
+      <a href="https://wa.me/918828245787?text=Free%20eye%20test%20book%20karna%20hai!" target="_blank" class="cta-btn">Book Free Eye Test</a>
+      <button class="hbg" id="HBG"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nl-row">
+    <div class="nl-inner">
+      <div class="nl on" onclick="fC('eyeglasses',this)">👓 Eyeglasses</div>
+      <div class="nl" onclick="fC('sunglasses',this)">🕶️ Sunglasses</div>
+      <div class="nl" onclick="fC('computer',this)">💻 Computer Glasses</div>
+      <div class="nl" onclick="fC('sports',this)">🏃 Sports</div>
+      <div class="nl" onclick="fC('kids',this)">🌈 Kids</div>
+      <div class="nl" onclick="fC('contact',this)">👁️ Contact Lenses</div>
+      <div class="nl" onclick="g('shapes')">🔷 By Shape</div>
+      <div class="nl" onclick="g('brands')">🏷️ By Brand</div>
+      <div class="nl" onclick="g('offers')" style="color:var(--red);font-weight:700">🎉 Offers <span class="hot">HOT</span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="h-pill">⭐ Mumbai's Trusted Eyewear Store</div>
+      <h1 class="h-title">Find Your<br/><em>Perfect Pair</em><br/>of Glasses</h1>
+      <p class="h-desc">500+ frames from Ray-Ban, Oakley, Fastrack &amp; Titan Eye+. Free eye test included. Trusted by thousands in Mumbai since 1999.</p>
+      <div class="h-btns">
+        <a href="#prods" class="btn-t" onclick="g('prods');return false">🛍️ Shop All Frames</a>
+        <a href="https://wa.me/918828245787?text=Free%20eye%20test%20chahiye!" target="_blank" class="btn-o">📲 Book Free Eye Test</a>
+      </div>
+      <div class="h-trust">
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Free Eye Test</div>
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>1 Year Warranty</div>
+        <div class="ti"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Same Day Ready</div>
+        <div class="ti"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Sakinaka Mumbai</div>
+      </div>
+    </div>
+    <div class="h-img-wrap">
+      <img class="h-img" src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=700&h=460&fit=crop" alt="Eye Shades Premium Eyewear Collection"/>
+      <div class="h-float"><div class="hf-big">25+</div><div class="hf-sm">Years of<br/>Trusted Service</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-in w">
+    <div class="sbox"><span class="n" data-count="2000">0</span><span class="l">Happy Customers</span></div>
+    <div class="sbox"><span class="n" data-count="500">0</span><span class="l">Frame Styles</span></div>
+    <div class="sbox"><span class="n">4</span><span class="l">Premium Brands</span></div>
+    <div class="sbox"><span class="n">25+</span><span class="l">Years Est. 1999</span></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="cat-bg sp" id="cats">
+  <div class="w">
+    <div class="sec-hd rev"><div><h2 class="st">Shop by <em>Category</em></h2><p class="ss">Browse our full range of eyewear</p></div></div>
+    <div class="cat-grid">
+      <div class="cc rev on" onclick="fC('eyeglasses',this)"><div class="c-img"><img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=140&h=140&fit=crop" alt=""/></div><h3>Eyeglasses</h3><span>200+ Frames</span></div>
+      <div class="cc rev" onclick="fC('sunglasses',this)"><div class="c-img"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=140&h=140&fit=crop" alt=""/></div><h3>Sunglasses</h3><span>120+ Styles</span></div>
+      <div class="cc rev" onclick="fC('computer',this)"><div class="c-img"><img src="https://images.unsplash.com/photo-1588776814546-1ffbb692df1e?w=140&h=140&fit=crop" alt=""/></div><h3>Computer Glasses</h3><span>Blue Light Block</span></div>
+      <div class="cc rev" onclick="fC('sports',this)"><div class="c-img"><img src="https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=140&h=140&fit=crop" alt=""/></div><h3>Sports Eyewear</h3><span>45+ Models</span></div>
+      <div class="cc rev" onclick="fC('kids',this)"><div class="c-img"><img src="https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?w=140&h=140&fit=crop" alt=""/></div><h3>Kids Glasses</h3><span>60+ Frames</span></div>
+      <div class="cc rev" onclick="fC('contact',this)"><div class="c-img"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=140&h=140&fit=crop" alt=""/></div><h3>Contact Lenses</h3><span>30+ Types</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SHAPES -->
+<div class="sp" id="shapes">
+  <div class="w">
+    <div class="sec-hd rev"><div><h2 class="st">Shop by <em>Shape</em></h2><p class="ss">Find the perfect frame shape for your face</p></div><a href="#prods" class="sa">View All →</a></div>
+    <div class="sh-scroll rev">
+      <div class="shc on" onclick="fSh('rectangle',this)"><div class="sh-icon"><svg viewBox="0 0 100 60" fill="none"><rect x="10" y="15" width="35" height="30" rx="4" stroke="#006e6e" stroke-width="3"/><rect x="55" y="15" width="35" height="30" rx="4" stroke="#006e6e" stroke-width="3"/><line x1="45" y1="28" x2="55" y2="28" stroke="#006e6e" stroke-width="3"/></svg></div><h4>Rectangle</h4><small>Round faces</small></div>
+      <div class="shc" onclick="fSh('round',this)"><div class="sh-icon"><svg viewBox="0 0 100 60" fill="none"><circle cx="30" cy="30" r="18" stroke="#006e6e" stroke-width="3"/><circle cx="70" cy="30" r="18" stroke="#006e6e" stroke-width="3"/><line x1="48" y1="28" x2="52" y2="28" stroke="#006e6e" stroke-width="3"/></svg></div><h4>Round</h4><small>Classic look</small></div>
+      <div class="shc" onclick="fSh('aviator',this)"><div class="sh-icon"><svg viewBox="0 0 100 60" fill="none"><path d="M12 14 Q8 14 8 22 Q8 38 28 40 Q48 42 48 30 L52 30 Q52 42 72 40 Q92 38 92 22 Q92 14 88 14 Z" stroke="#006e6e" stroke-width="3"/><line x1="48" y1="28" x2="52" y2="28" stroke="#006e6e" stroke-width="3"/></svg></div><h4>Aviator</h4><small>Pilot style</small></div>
+      <div class="shc" onclick="fSh('wayfarer',this)"><div class="sh-icon"><svg viewBox="0 0 100 60" fill="none"><path d="M10 12 L45 12 Q48 12 48 15 L48 38 Q48 42 44 43 Q30 45 16 42 Q10 40 10 35 Z" stroke="#006e6e" stroke-width="3"/><path d="M90 12 L55 12 Q52 12 52 15 L52 38 Q52 42 56 43 Q70 45 84 42 Q90 40 90 35 Z" stroke="#006e6e" stroke-width="3"/><line x1="48" y1="22" x2="52" y2="22" stroke="#006e6e" stroke-width="3"/></svg></div><h4>Wayfarer</h4><small>Retro cool</small></div>
+      <div class="shc" onclick="fSh('cateye',this)"><div class="sh-icon"><svg viewBox="0 0 100 60" fill="none"><path d="M10 30 Q10 14 26 12 L46 10 Q48 10 48 25 L48 38 Q40 44 25 42 Q10 40 10 30 Z" stroke="#006e6e" stroke-width="3"/><path d="M90 30 Q90 14 74 12 L54 10 Q52 10 52 25 L52 38 Q60 44 75 42 Q90 40 90 30 Z" stroke="#006e6e" stroke-width="3"/><line x1="48" y1="24" x2="52" y2="24" stroke="#006e6e" stroke-width="3"/></svg></div><h4>Cat-Eye</h4><small>Glamorous</small></div>
+      <div class="shc" onclick="fSh('hexagonal',this)"><div class="sh-icon"><svg viewBox="0 0 100 60" fill="none"><polygon points="18,10 38,10 48,28 38,46 18,46 8,28" stroke="#006e6e" stroke-width="3" fill="none"/><polygon points="82,10 62,10 52,28 62,46 82,46 92,28" stroke="#006e6e" stroke-width="3" fill="none"/></svg></div><h4>Hexagonal</h4><small>Geometric</small></div>
+      <div class="shc" onclick="fSh('oval',this)"><div class="sh-icon"><svg viewBox="0 0 100 60" fill="none"><ellipse cx="28" cy="30" rx="20" ry="16" stroke="#006e6e" stroke-width="3"/><ellipse cx="72" cy="30" rx="20" ry="16" stroke="#006e6e" stroke-width="3"/><line x1="48" y1="28" x2="52" y2="28" stroke="#006e6e" stroke-width="3"/></svg></div><h4>Oval</h4><small>Universal fit</small></div>
+      <div class="shc" onclick="fSh('square',this)"><div class="sh-icon"><svg viewBox="0 0 100 60" fill="none"><rect x="8" y="12" width="36" height="36" rx="3" stroke="#006e6e" stroke-width="3"/><rect x="56" y="12" width="36" height="36" rx="3" stroke="#006e6e" stroke-width="3"/><line x1="44" y1="28" x2="56" y2="28" stroke="#006e6e" stroke-width="3"/></svg></div><h4>Square</h4><small>Bold &amp; strong</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- BRANDS -->
+<div class="br-bg sp" id="brands">
+  <div class="w">
+    <div class="sec-hd rev"><div><h2 class="st">Shop by <em>Brand</em></h2><p class="ss">Authorised dealer for all major brands</p></div></div>
+    <div class="br-row rev">
+      <button class="brb on" onclick="fB('all',this)">All Brands</button>
+      <button class="brb" onclick="fB('ray-ban',this)">Ray-Ban</button>
+      <button class="brb" onclick="fB('oakley',this)">Oakley</button>
+      <button class="brb" onclick="fB('fastrack',this)">Fastrack</button>
+      <button class="brb" onclick="fB('titan',this)">Titan Eye+</button>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="sp" id="prods">
+  <div class="w">
+    <div class="sec-hd rev">
+      <div><h2 class="st" id="PT">All <em>Products</em></h2><p class="ss" id="PS">Showing all frames · filter above to narrow down</p></div>
+      <a href="https://wa.me/918828245787?text=Poora%20catalog%20dekhna%20hai!" target="_blank" class="sa">Full Catalog →</a>
+    </div>
+    <div class="fb-row rev">
+      <span class="flb">Price:</span>
+      <button class="fb on" onclick="fP('all',this)">All</button>
+      <button class="fb" onclick="fP('budget',this)">Under ₹500</button>
+      <button class="fb" onclick="fP('mid',this)">₹500–₹1,500</button>
+      <button class="fb" onclick="fP('premium',this)">₹1,500–₹3,000</button>
+      <button class="fb" onclick="fP('luxury',this)">₹3,000+</button>
+    </div>
+    <div class="pg" id="PG">
+
+      <!-- RAY-BAN -->
+      <div class="pc rev" data-cat="sunglasses" data-brand="ray-ban" data-price="premium" data-shape="aviator"><div class="pi"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bb">Bestseller</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Ray-Ban</p><h3 class="pnm">Aviator Classic RB3025</h3><p class="pds">Gold metal · UV400 · Polarised · Unisex</p><div class="pst"><span class="s">★★★★★</span><span class="c">(48)</span></div><div class="pft"><span class="ppr">₹2,499 <span class="or">₹3,200</span> <span class="of">22% off</span></span><a href="https://wa.me/918828245787?text=Ray-Ban%20Aviator%20RB3025%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="sunglasses" data-brand="ray-ban" data-price="premium" data-shape="wayfarer"><div class="pi"><img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bh">🔥 Hot</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Ray-Ban</p><h3 class="pnm">Wayfarer Classic RB2140</h3><p class="pds">Acetate · Black · Polarised · Iconic</p><div class="pst"><span class="s">★★★★★</span><span class="c">(62)</span></div><div class="pft"><span class="ppr">₹2,299 <span class="or">₹2,999</span> <span class="of">23% off</span></span><a href="https://wa.me/918828245787?text=Ray-Ban%20Wayfarer%20RB2140%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="sunglasses" data-brand="ray-ban" data-price="premium" data-shape="round"><div class="pi"><img src="https://images.unsplash.com/photo-1553735945-6acbc61c82e4?w=400&h=280&fit=crop" loading="lazy" alt=""/><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Ray-Ban</p><h3 class="pnm">Round Metal RB3447</h3><p class="pds">Gold wire · Amber gradient · Vintage</p><div class="pst"><span class="s">★★★★☆</span><span class="c">(31)</span></div><div class="pft"><span class="ppr">₹2,199 <span class="or">₹2,800</span> <span class="of">21% off</span></span><a href="https://wa.me/918828245787?text=Ray-Ban%20Round%20Metal%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="eyeglasses" data-brand="ray-ban" data-price="premium" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bn">New</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Ray-Ban</p><h3 class="pnm">RX5228 Prescription Frame</h3><p class="pds">Acetate rectangle · Anti-glare coating</p><div class="pst"><span class="s">★★★★★</span><span class="c">(27)</span></div><div class="pft"><span class="ppr">₹2,899</span><a href="https://wa.me/918828245787?text=Ray-Ban%20RX5228%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <!-- OAKLEY -->
+      <div class="pc rev" data-cat="sports" data-brand="oakley" data-price="premium" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bb">Bestseller</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Oakley</p><h3 class="pnm">Holbrook Sport</h3><p class="pds">Unobtainium · Impact resist · Cricket/Cycling</p><div class="pst"><span class="s">★★★★★</span><span class="c">(54)</span></div><div class="pft"><span class="ppr">₹3,499 <span class="or">₹4,200</span> <span class="of">17% off</span></span><a href="https://wa.me/918828245787?text=Oakley%20Holbrook%20Sport%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="sports" data-brand="oakley" data-price="luxury" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bn">New</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Oakley</p><h3 class="pnm">Radar EV Path PRIZM</h3><p class="pds">PRIZM lens · Full coverage · Running</p><div class="pst"><span class="s">★★★★★</span><span class="c">(38)</span></div><div class="pft"><span class="ppr">₹5,499</span><a href="https://wa.me/918828245787?text=Oakley%20Radar%20EV%20Path%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="sports" data-brand="oakley" data-price="premium" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bh">Hot</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Oakley</p><h3 class="pnm">Flak 2.0 XL PRIZM</h3><p class="pds">PRIZM Field · Cricket / Outdoor sport</p><div class="pst"><span class="s">★★★★★</span><span class="c">(41)</span></div><div class="pft"><span class="ppr">₹4,199</span><a href="https://wa.me/918828245787?text=Oakley%20Flak%202.0%20XL%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="sunglasses" data-brand="oakley" data-price="premium" data-shape="square"><div class="pi"><img src="https://images.unsplash.com/photo-1516707058903-c4f60bc5f71b?w=400&h=280&fit=crop" loading="lazy" alt=""/><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Oakley</p><h3 class="pnm">Frogskins Classic</h3><p class="pds">O Matter frame · Lifestyle sunglass</p><div class="pst"><span class="s">★★★★☆</span><span class="c">(29)</span></div><div class="pft"><span class="ppr">₹2,999 <span class="or">₹3,800</span> <span class="of">21% off</span></span><a href="https://wa.me/918828245787?text=Oakley%20Frogskins%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <!-- FASTRACK -->
+      <div class="pc rev" data-cat="sunglasses" data-brand="fastrack" data-price="mid" data-shape="wayfarer"><div class="pi"><img src="https://images.unsplash.com/photo-1473496169904-658ba7574b0d?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bb">Bestseller</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Fastrack</p><h3 class="pnm">Wayfarer P359 BK</h3><p class="pds">Acetate · Smoke lens · Unisex</p><div class="pst"><span class="s">★★★★☆</span><span class="c">(76)</span></div><div class="pft"><span class="ppr">₹999 <span class="or">₹1,299</span> <span class="of">23% off</span></span><a href="https://wa.me/918828245787?text=Fastrack%20Wayfarer%20P359%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="sunglasses" data-brand="fastrack" data-price="mid" data-shape="aviator"><div class="pi"><img src="https://images.unsplash.com/photo-1577803645773-f96470509666?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bs">Sale</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Fastrack</p><h3 class="pnm">Aviator C054 Metal</h3><p class="pds">Metal · UV400 · Light tint · Casual</p><div class="pst"><span class="s">★★★★☆</span><span class="c">(43)</span></div><div class="pft"><span class="ppr">₹849 <span class="or">₹1,100</span> <span class="of">23% off</span></span><a href="https://wa.me/918828245787?text=Fastrack%20Aviator%20C054%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="sports" data-brand="fastrack" data-price="mid" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=280&fit=crop" loading="lazy" alt=""/><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Fastrack</p><h3 class="pnm">Runner Sports P400</h3><p class="pds">Non-slip nose · Lightweight · Running/Gym</p><div class="pst"><span class="s">★★★★★</span><span class="c">(35)</span></div><div class="pft"><span class="ppr">₹1,199</span><a href="https://wa.me/918828245787?text=Fastrack%20Runner%20P400%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="sunglasses" data-brand="fastrack" data-price="budget" data-shape="cateye"><div class="pi"><img src="https://images.unsplash.com/photo-1625591341337-13b3c98a4f1f?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bn">New</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Fastrack</p><h3 class="pnm">Cat Eye Diva C078</h3><p class="pds">Colourful gradient · Women · Trendy</p><div class="pst"><span class="s">★★★★★</span><span class="c">(52)</span></div><div class="pft"><span class="ppr">₹499 <span class="or">₹699</span> <span class="of">29% off</span></span><a href="https://wa.me/918828245787?text=Fastrack%20Cat%20Eye%20C078%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <!-- TITAN -->
+      <div class="pc rev" data-cat="eyeglasses" data-brand="titan" data-price="mid" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bb">Bestseller</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Titan Eye+</p><h3 class="pnm">Slim Flex Rectangle</h3><p class="pds">Metal · Anti-glare · Featherlight · Unisex</p><div class="pst"><span class="s">★★★★★</span><span class="c">(89)</span></div><div class="pft"><span class="ppr">₹1,299 <span class="or">₹1,699</span> <span class="of">24% off</span></span><a href="https://wa.me/918828245787?text=Titan%20Slim%20Flex%20Rectangle%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="computer" data-brand="titan" data-price="mid" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1588776814546-1ffbb692df1e?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bn">New</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Titan Eye+</p><h3 class="pnm">BlueGuard Computer Glass</h3><p class="pds">Blue light block · Anti-glare · Office use</p><div class="pst"><span class="s">★★★★★</span><span class="c">(67)</span></div><div class="pft"><span class="ppr">₹1,599 <span class="or">₹2,000</span> <span class="of">20% off</span></span><a href="https://wa.me/918828245787?text=Titan%20BlueGuard%20computer%20glasses%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="eyeglasses" data-brand="titan" data-price="premium" data-shape="oval"><div class="pi"><img src="https://images.unsplash.com/photo-1512163143273-bde0e3cc7407?w=400&h=280&fit=crop" loading="lazy" alt=""/><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Titan Eye+</p><h3 class="pnm">Rimless Ultra Titanium</h3><p class="pds">Titanium · Zero-rim · Professional look</p><div class="pst"><span class="s">★★★★☆</span><span class="c">(34)</span></div><div class="pft"><span class="ppr">₹2,499</span><a href="https://wa.me/918828245787?text=Titan%20Rimless%20Ultra%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="kids" data-brand="titan" data-price="mid" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bn">Kids</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Titan Eye+</p><h3 class="pnm">Junior Flex Kids Frame</h3><p class="pds">TR90 flex · Impact proof · Age 6–14</p><div class="pst"><span class="s">★★★★★</span><span class="c">(45)</span></div><div class="pft"><span class="ppr">₹899 <span class="or">₹1,199</span> <span class="of">25% off</span></span><a href="https://wa.me/918828245787?text=Titan%20Junior%20Flex%20Kids%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <!-- BUDGET -->
+      <div class="pc rev" data-cat="eyeglasses" data-brand="eyeshades" data-price="budget" data-shape="rectangle"><div class="pi"><img src="https://images.unsplash.com/photo-1529913175498-28e86f479bf4?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bs">Best Value</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Eye Shades</p><h3 class="pnm">Classic Everyday Frame</h3><p class="pds">Lightweight · Anti-scratch · Daily wear</p><div class="pst"><span class="s">★★★★☆</span><span class="c">(112)</span></div><div class="pft"><span class="ppr">₹399 <span class="or">₹599</span> <span class="of">33% off</span></span><a href="https://wa.me/918828245787?text=Classic%20Everyday%20Frame%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+      <div class="pc rev" data-cat="contact" data-brand="eyeshades" data-price="mid" data-shape=""><div class="pi"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=280&fit=crop" loading="lazy" alt=""/><span class="pbdg bb">Popular</span><div class="pw"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div><div class="pinf"><p class="pbr">Acuvue</p><h3 class="pnm">Daily Moist 30 Pack</h3><p class="pds">Daily disposable · Moisture sealed · UV block</p><div class="pst"><span class="s">★★★★★</span><span class="c">(88)</span></div><div class="pft"><span class="ppr">₹1,200</span><a href="https://wa.me/918828245787?text=Acuvue%20Daily%20Moist%20lenses%20enquire." target="_blank" class="peq">Enquire</a></div></div></div>
+
+    </div>
+    <div style="text-align:center;margin-top:28px" class="rev">
+      <a href="https://wa.me/918828245787?text=Poora%20catalog%20dekhna%20hai!" target="_blank" class="btn-o">📲 View Complete Catalog on WhatsApp →</a>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="how-bg sp">
+  <div class="w">
+    <div class="sec-hd rev"><div><h2 class="st">How It <em>Works</em></h2><p class="ss">Getting perfect glasses is easy at Eye Shades</p></div></div>
+    <div class="how-grid">
+      <div class="hwc rev"><div class="hwn">1</div><h3>Browse &amp; Choose</h3><p>Pick your style from 500+ frames or WhatsApp us your preferences anytime.</p></div>
+      <div class="hwc rev"><div class="hwn">2</div><h3>Free Eye Test</h3><p>Expert optician does a thorough check — completely free. Walk in anytime, no appointment needed.</p></div>
+      <div class="hwc rev"><div class="hwn">3</div><h3>Custom Lens Fitting</h3><p>We fit your exact prescription — single vision, bifocal, progressive or zero power.</p></div>
+      <div class="hwc rev"><div class="hwn">4</div><h3>Same Day Ready!</h3><p>Most orders ready same day. Home delivery available across Mumbai.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- OFFERS -->
+<div class="sp" id="offers">
+  <div class="w">
+    <div class="sec-hd rev"><div><h2 class="st">Special <em>Offers</em></h2><p class="ss">Limited time deals — don't miss out!</p></div></div>
+    <div class="off-grid">
+      <div class="ob tl rev"><div><h3>Free Eye Test<br/>for Everyone</h3><p>Walk in or book via WhatsApp. Expert optician, zero charges, zero obligation.</p><a href="https://wa.me/918828245787?text=Free%20eye%20test%20book%20karna%20hai!" target="_blank" class="ob-btn">Book Now →</a></div><div class="ob-d">👁️</div></div>
+      <div class="ob am rev"><div><h3>Frame + Lens<br/>20% Off</h3><p>Buy any Ray-Ban or Oakley frame and get 20% off on prescription lenses.</p><a href="https://wa.me/918828245787?text=Frame+lens%20offer%20ke%20baare%20mein%20poochna%20tha!" target="_blank" class="ob-btn">Enquire →</a></div><div class="ob-d">🎁</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- VIRTUAL TRY-ON -->
+<div class="tryon-bg sp" id="tryon">
+  <div class="w">
+    <div class="tryon-in">
+      <div class="rev">
+        <span class="tr-tag">✨ Virtual Try-On</span>
+        <h2 class="tr-title">Try Frames on<br/><em>Your Face</em> Free!</h2>
+        <p class="tr-desc">No app needed. Send your selfie on WhatsApp and we show you how different frames look on your face before you buy.</p>
+        <div class="tr-steps">
+          <div class="tr-step"><div class="tr-dot">1</div><p>Send selfie to <strong>+91 88282 45787</strong> on WhatsApp</p></div>
+          <div class="tr-step"><div class="tr-dot">2</div><p>Tell us your style — classic, trendy, sporty, or bold</p></div>
+          <div class="tr-step"><div class="tr-dot">3</div><p>We send virtual try-on images within minutes!</p></div>
+        </div>
+        <a href="https://wa.me/918828245787?text=Virtual%20try-on%20karna%20hai!" target="_blank" class="btn-t">Start Virtual Try-On →</a>
+      </div>
+      <div class="tr-mock rev">
+        <span class="tr-emoji">🧑‍💼</span>
+        <div class="tr-live"><div class="ldot"></div><span>WhatsApp Try-On Ready</span></div>
+        <p>Apni photo bhejo aur frames<br/>apne chehere pe dekho!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="rev-bg sp" id="reviews">
+  <div class="w">
+    <div class="sec-hd rev">
+      <div><h2 class="st">Customer <em>Reviews</em></h2><p class="ss">Real feedback from real Mumbai customers</p></div>
+      <a href="https://maps.app.goo.gl/E3NysPwv37Y1Xio9A" target="_blank" class="sa">All Reviews →</a>
+    </div>
+    <div class="rat-sum rev">
+      <div class="rb"><div class="sc">4.9</div><div class="ss2">★★★★★</div><div class="tot">Overall Rating</div></div>
+      <div class="rdv"></div>
+      <div class="rbrs">
+        <div class="rrow"><span>5 ★</span><div class="rbar"><div class="rbf" style="width:88%"></div></div></div>
+        <div class="rrow"><span>4 ★</span><div class="rbar"><div class="rbf" style="width:9%"></div></div></div>
+        <div class="rrow"><span>3 ★</span><div class="rbar"><div class="rbf" style="width:2%"></div></div></div>
+        <div class="rrow"><span>2 ★</span><div class="rbar"><div class="rbf" style="width:1%"></div></div></div>
+        <div class="rrow"><span>1 ★</span><div class="rbar"><div class="rbf" style="width:0%"></div></div></div>
+      </div>
+      <div class="rdv"></div>
+      <div class="rg">
+        <svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.34-8.16 2.34-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <div><div class="gn">4.9 ★</div><div class="gl">on Google Maps</div></div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <!-- ⚠️ Apne real Google reviews se replace karo -->
+      <div class="rvc rev"><div class="rv-top"><div class="rv-av" style="background:linear-gradient(135deg,#006e6e,#00a3a3)">R</div><div class="rv-meta"><h4>Rahul Mehta</h4><span>2 weeks ago</span></div></div><div class="rv-st">★★★★★</div><p class="rv-txt">Best optical shop in Sakinaka! Shaikh bhai ne sahi frame choose karne mein bahut help ki. Collection ekdum zabardast aur price bhi bahut fair. Highly recommended!</p><div class="rv-src"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.34-8.16 2.34-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span>Google Review</span></div></div>
+      <div class="rvc rev"><div class="rv-top"><div class="rv-av" style="background:linear-gradient(135deg,#6366f1,#4338ca)">P</div><div class="rv-meta"><h4>Priya Sharma</h4><span>1 month ago</span></div></div><div class="rv-st">★★★★★</div><p class="rv-txt">Got my Ray-Ban at a great price! Free eye test kiya, same day ready tha. Lenses quality superb — no issues at all. Very professional staff. Will come again!</p><div class="rv-src"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.34-8.16 2.34-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span>Google Review</span></div></div>
+      <div class="rvc rev"><div class="rv-top"><div class="rv-av" style="background:linear-gradient(135deg,#f59e0b,#d97706)">A</div><div class="rv-meta"><h4>Amir Khan</h4><span>3 weeks ago</span></div></div><div class="rv-st">★★★★★</div><p class="rv-txt">Since 1999 ye dukan hai aur quality mein koi compromise nahi! Oakley glasses amazing price mein mile. Sakinaka ka best eyewear shop — 10 out of 10!</p><div class="rv-src"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.34-8.16 2.34-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span>Google Review</span></div></div>
+    </div>
+    <div class="rcta rev">
+      <a href="https://maps.app.goo.gl/E3NysPwv37Y1Xio9A" target="_blank">
+        <svg viewBox="0 0 48 48" width="18" height="18"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.34-8.16 2.34-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        Rate Us on Google Maps
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- INSTAGRAM -->
+<div class="sp">
+  <div class="w">
+    <div class="insta-hd rev">
+      <h2 class="st">Follow Us on <em>Instagram</em></h2>
+      <div class="ih"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@eyeshades_sakinaka</div>
+    </div>
+    <div class="insta-grid rev">
+      <div class="ig"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=280&h=280&fit=crop" alt=""/><div class="ig-ov"><span>View Post</span></div></div>
+      <div class="ig"><img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=280&h=280&fit=crop" alt=""/><div class="ig-ov"><span>View Post</span></div></div>
+      <div class="ig"><img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=280&h=280&fit=crop" alt=""/><div class="ig-ov"><span>View Post</span></div></div>
+      <div class="ig"><img src="https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=280&h=280&fit=crop" alt=""/><div class="ig-ov"><span>View Post</span></div></div>
+      <div class="ig"><img src="https://images.unsplash.com/photo-1625591341337-13b3c98a4f1f?w=280&h=280&fit=crop" alt=""/><div class="ig-ov"><span>View Post</span></div></div>
+    </div>
+    <div class="icta rev"><a href="https://www.instagram.com/" target="_blank">📸 Follow @eyeshades_sakinaka on Instagram</a></div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<div class="why-bg sp">
+  <div class="w">
+    <div class="why-grid">
+      <div class="wy rev"><span class="wy-ic">🆓</span><div><h4>Free Eye Test</h4><p>Professional check at zero cost, every visit.</p></div></div>
+      <div class="wy rev"><span class="wy-ic">🛡️</span><div><h4>1 Year Warranty</h4><p>All frames and lenses covered. Protected.</p></div></div>
+      <div class="wy rev"><span class="wy-ic">⚡</span><div><h4>Same Day Ready</h4><p>Most prescriptions ready the same day.</p></div></div>
+      <div class="wy rev"><span class="wy-ic">🏆</span><div><h4>25+ Years Trust</h4><p>Serving Mumbai since 1999. Thousands of happy customers.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FIND US -->
+<div class="fu-bg sp" id="findus">
+  <div class="w">
+    <div class="fu-grid">
+      <div class="fi rev">
+        <h2>Visit Our <em>Store</em></h2>
+        <p class="sub">Come see our full collection in person. Free eye test daily — no appointment needed!</p>
+        <div class="op-badge"><div class="op-dot"></div><span>Open Today · 10:00 AM – 9:00 PM</span></div>
+        <div class="cl">
+          <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Address</h4><p>Eye Shades, Shop No. 03, Opp. Shubhangi Medical<br/>Andheri Sakinaka Pipeline, Mumbai – 400072</p></div></div>
+          <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><h4>WhatsApp / Call</h4><p><a href="tel:+918828245787">+91 88282 45787</a></p></div></div>
+          <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><h4>Store Hours</h4><p>Mon – Sat: 10:00 AM – 9:00 PM<br/>Sunday: 11:00 AM – 7:00 PM</p></div></div>
+          <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Email</h4><p><a href="mailto:eyeshades2023@gmail.com">eyeshades2023@gmail.com</a></p></div></div>
+        </div>
+        <a href="https://maps.app.goo.gl/E3NysPwv37Y1Xio9A" target="_blank" class="dir-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>Get Directions
+        </a>
+      </div>
+      <div class="map-wrap rev">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.05!2d72.8886363!3d19.1023394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9117da6574f%3A0x701626d5a1db52cc!2sEye%20Shades%20Sakinaka!5e0!3m2!1sen!2sin!4v1711800000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Eye Shades Sakinaka"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-grid">
+      <div class="ft-brand"><span class="ft-logo">Eye Shades</span><span class="ft-est">Sakinaka, Mumbai · Est. 1999</span><p>Mumbai's trusted premium eyewear destination. 500+ frames from Ray-Ban, Oakley, Fastrack &amp; Titan Eye+. Free eye test, same day service, 1-year warranty.</p></div>
+      <div class="ft-col"><h4>Shop</h4><ul><li><a href="#prods">Eyeglasses</a></li><li><a href="#prods">Sunglasses</a></li><li><a href="#prods">Computer Glasses</a></li><li><a href="#prods">Sports Eyewear</a></li><li><a href="#prods">Kids Glasses</a></li><li><a href="#prods">Contact Lenses</a></li></ul></div>
+      <div class="ft-col"><h4>Brands</h4><ul><li><a href="#brands">Ray-Ban</a></li><li><a href="#brands">Oakley</a></li><li><a href="#brands">Fastrack</a></li><li><a href="#brands">Titan Eye+</a></li></ul></div>
+      <div class="ft-col"><h4>Contact</h4><ul><li><a href="https://wa.me/918828245787" target="_blank">+91 88282 45787</a></li><li><a href="mailto:eyeshades2023@gmail.com">eyeshades2023@gmail.com</a></li><li><a href="https://maps.app.goo.gl/E3NysPwv37Y1Xio9A" target="_blank">Shop No. 03, Sakinaka Pipeline</a></li><li><a href="https://maps.app.goo.gl/E3NysPwv37Y1Xio9A" target="_blank">Andheri, Mumbai 400072</a></li></ul></div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2025 Eye Shades, Andheri Sakinaka. All rights reserved.</p>
+      <div class="soc-row">
+        <a href="https://wa.me/918828245787" target="_blank" class="sb"><svg viewBox="0 0 24 24" fill="#9ca3af"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" class="sb"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://maps.app.goo.gl/E3NysPwv37Y1Xio9A" target="_blank" class="sb"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function g(id){document.getElementById(id)&&document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+// Mobile menu
+const mo=document.getElementById('mobOv'),mp=document.getElementById('mobP');
+document.getElementById('HBG').onclick=()=>{mo.classList.add('open');mp.style.transform='none'};
+document.getElementById('mobX').onclick=cm;
+mo.addEventListener('click',e=>{if(e.target===mo)cm()});
+function cm(){mp.style.transform='translateX(-100%)';setTimeout(()=>mo.classList.remove('open'),300)}
+document.querySelectorAll('.mob-a').forEach(a=>a.addEventListener('click',cm));
+
+// Scroll reveal
+const ro=new IntersectionObserver((e,o)=>{e.forEach((en,i)=>{if(en.isIntersecting){setTimeout(()=>en.target.classList.add('vis'),i*55);o.unobserve(en.target)}})},{threshold:.08});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+
+// Counters
+const co=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,t=+el.dataset.count;let c=0;const s=t/55;const tm=setInterval(()=>{c+=s;if(c>=t){el.textContent=t.toLocaleString()+'+';clearInterval(tm)}else el.textContent=Math.floor(c).toLocaleString()+'+'},22);co.unobserve(el)}})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+// Filters
+let aB='all',aC='all',aP='all';
+function fC(cat,el){
+  aC=cat;
+  document.querySelectorAll('.cc').forEach(c=>c.classList.remove('on'));
+  document.querySelectorAll('.nl').forEach(l=>l.classList.remove('on'));
+  if(el){el.classList.add('on')}
+  applyF();g('prods');
+  const t={eyeglasses:'Eyeglasses',sunglasses:'Sunglasses',computer:'Computer Glasses',sports:'Sports Eyewear',kids:'Kids Glasses',contact:'Contact Lenses',all:'All Products'};
+  const PT=document.getElementById('PT');
+  if(PT){const words=(t[cat]||'All Products').split(' ');PT.innerHTML=words[0]+' <em>'+words.slice(1).join(' ')+'</em>'}
+}
+function fB(b,el){
+  aB=b;
+  document.querySelectorAll('.brb').forEach(x=>x.classList.remove('on'));
+  if(el)el.classList.add('on');
+  applyF();g('prods');
+}
+function fP(p,el){
+  aP=p;
+  document.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));
+  if(el)el.classList.add('on');
+  applyF();
+}
+function applyF(){
+  document.querySelectorAll('.pc').forEach(c=>{
+    const cm=aC==='all'||c.dataset.cat===aC;
+    const bm=aB==='all'||c.dataset.brand===aB;
+    const pm=aP==='all'||c.dataset.price===aP;
+    c.style.display=(cm&&bm&&pm)?'':'none';
+  });
+}
+function fSh(sh,el){
+  document.querySelectorAll('.shc').forEach(c=>c.classList.remove('on'));
+  if(el)el.classList.add('on');
+  document.querySelectorAll('.pc').forEach(c=>{c.style.display=(sh==='all'||c.dataset.shape===sh)?'':'none'});
+  g('prods');
+}
+
+// Search
+document.getElementById('SI').addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim();
+  document.querySelectorAll('.pc').forEach(c=>{
+    if(!q){c.style.display='';return}
+    const nm=c.querySelector('.pnm').textContent.toLowerCase();
+    const br=c.querySelector('.pbr').textContent.toLowerCase();
+    c.style.display=(nm.includes(q)||br.includes(q))?'':'none';
+  });
+});
+</script>
+</body>
+</html>
